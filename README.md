@@ -6,10 +6,6 @@ Built for GNOME on Wayland, where rofi itself cannot run, so you can still get t
 
 ![Demo](assets/demo.gif)
 
-## Preview
-
-![Screenshot](assets/screenshot.png)
-
 ## Features
 
 - Compact rofi style rows (about 42px instead of 70px)
