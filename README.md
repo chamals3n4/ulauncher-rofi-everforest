@@ -37,7 +37,7 @@ On other distros, install Fira Mono from your package manager or from [Google Fo
 
    ```bash
    mkdir -p ~/.config/ulauncher/user-themes
-   git clone https://github.com/<your-username>/ulauncher-rofi-everforest.git \
+   git clone https://github.com/chamals3n4/ulauncher-rofi-everforest.git \
      ~/.config/ulauncher/user-themes/rofi-dark
    ```
 
