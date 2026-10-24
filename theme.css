@@ -1,0 +1,107 @@
+/* Everforest palette */
+@define-color bg      #2f383e;
+@define-color bg_alt  #374247;
+@define-color fg      #d3c6aa;
+@define-color green   #a7c080;
+
+window, .main {
+  background-color: transparent;
+}
+
+/* top band = input color */
+.app {
+  background-color: @bg_alt;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+/* input band: GtkEntry has fixed 15px/20px margins in the .ui, pull them in */
+.input {
+  background-color: transparent;
+  color: @green;
+  caret-color: @fg;
+  font-family: "Fira Mono", "JetBrains Mono", "Noto Sans Mono", monospace;
+  font-size: 17px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  min-height: 0;
+  padding: 0;
+  margin: 0 0 0 -10px;
+}
+
+/* input row: entry is 30px + 15px margins in the .ui, shrink band to rofi size */
+.app > box:first-child {
+  margin: -9px 0 -12px 0;
+}
+
+.prefs-btn {
+  opacity: 0;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  margin: 0 -15px 0 -24px;
+  border: none;
+  background: none;
+  box-shadow: none;
+}
+
+/* result box gets margin-top 3 / margin-bottom 10 from code */
+/* code leaves a 10px margin under the list; paint it in the list color with
+   shadows. The -1px spread makes them vanish when the list is empty (1px box),
+   the +-1px x offsets cover the edges the spread eats. */
+.result-box {
+  background-color: transparent;
+  box-shadow: 1px 11px 0 -1px @bg, -1px 11px 0 -1px @bg;
+  padding: 0;
+  margin: 0;
+}
+
+
+.item-box {
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  background-color: @bg;
+}
+
+/* row = 3 + 50 (icon) + 3 in the .ui; squeeze to rofi height */
+.item-container {
+  margin: -7px 0 -7px -25px;
+}
+
+.item-icon {
+  -gtk-icon-transform: scale(0.45);
+  margin: 0 -10px 0 -12px;
+}
+
+.item-name {
+  color: @fg;
+  font-family: "Fira Mono", "JetBrains Mono", "Noto Sans Mono", monospace;
+  font-size: 17px;
+  margin: 6px 0 0 0;
+  padding: 0;
+}
+
+.item-descr {
+  font-size: 0.1px;
+  color: transparent;
+  margin: 0;
+  padding: 0;
+  min-height: 0;
+}
+
+.item-shortcut {
+  color: transparent;
+  font-size: 0.1px;
+}
+
+.selected.item-box {
+  background-color: @green;
+}
+.selected.item-box .item-name {
+  color: @bg;
+}
